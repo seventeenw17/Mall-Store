@@ -1,0 +1,350 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : c2
+ Source Server Type    : MongoDB
+ Source Server Version : 40213
+ Source Host           : localhost:27017
+ Source Schema         : mall
+
+ Target Server Type    : MongoDB
+ Target Server Version : 40213
+ File Encoding         : 65001
+
+ Date: 18/07/2024 15:02:15
+*/
+
+
+// ----------------------------
+// Collection structure for t_product
+// ----------------------------
+db.getCollection("t_product").drop();
+db.createCollection("t_product");
+
+// ----------------------------
+// Documents of t_product
+// ----------------------------
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b1b3934b00004f007fc2"),
+    name: "蓝月亮洗衣液",
+    price: 28.8,
+    num: NumberInt("30"),
+    visitCount: NumberLong("101"),
+    addDate: ISODate("2024-07-17T00:00:00.000Z"),
+    status: NumberInt("1"),
+    info: "洗得干净",
+    picture: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/131237/34/18032/80926/60ba0ee8E32ab76cc/6166d3b865b27c74.jpg!q80.dpg",
+    createdUser: "wj",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedUser: "wj",
+    modifiedTime: ISODate("2024-07-17T00:00:00.000Z")
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b617d454266fb29c8db7"),
+    name: "扫把",
+    price: 15,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:28:39.486Z"),
+    status: NumberInt("0"),
+    info: "家中常备",
+    picture: "https://cbu01.alicdn.com/img/ibank/2019/176/919/10457919671_2125343153.jpg",
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:28:39.487Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b647d454266fb29c8db8"),
+    name: "商品1",
+    price: 9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:27.602Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:27.602Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b64bd454266fb29c8db9"),
+    name: "商品2",
+    price: 9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:31.782Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:31.782Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b64ed454266fb29c8dba"),
+    name: "商品3",
+    price: 9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:34.749Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:34.75Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b654d454266fb29c8dbb"),
+    name: "商品4",
+    price: 9.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:40.86Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:40.86Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b65bd454266fb29c8dbc"),
+    name: "商品5",
+    price: 19.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:47.255Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:47.255Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b65fd454266fb29c8dbd"),
+    name: "商品6",
+    price: 19.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:51.627Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:51.627Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b665d454266fb29c8dbe"),
+    name: "商品7",
+    price: 29.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:29:57.692Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:29:57.692Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b669d454266fb29c8dbf"),
+    name: "商品8",
+    price: 29.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:30:01.809Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:30:01.809Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b66dd454266fb29c8dc0"),
+    name: "商品9",
+    price: 29.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:30:05.429Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:30:05.429Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+db.getCollection("t_product").insert([ {
+    _id: ObjectId("6698b674d454266fb29c8dc1"),
+    name: "商品10",
+    price: 99.9,
+    num: NumberInt("0"),
+    visitCount: NumberLong("0"),
+    addDate: ISODate("2024-07-18T06:30:12.288Z"),
+    status: NumberInt("0"),
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-18T06:30:12.288Z"),
+    _class: "com.mall.classes.product.pojo.entity.Product"
+} ]);
+
+// ----------------------------
+// Collection structure for t_user
+// ----------------------------
+db.getCollection("t_user").drop();
+db.createCollection("t_user");
+
+// ----------------------------
+// Documents of t_user
+// ----------------------------
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("66972dbaa3160000c10046d2"),
+    username: "admin",
+    password: "admin",
+    sex: NumberInt("1"),
+    age: NumberInt("25"),
+    tel: "15077771111",
+    email: "mall.admin@163.com",
+    address: "重庆市",
+    status: NumberInt("1"),
+    createdUser: "admin",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedUser: "admin",
+    modifiedTime: ISODate("2024-07-17T00:00:00.000Z"),
+    picture: "https://cdn.luogu.com.cn/upload/image_hosting/z48pib2q.png?x-oss-process=image/resize,m_lfit,h_170,w_225"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("66973926a3160000c10046d3"),
+    password: "wj123456",
+    sex: NumberInt("1"),
+    age: NumberInt("20"),
+    tel: "18255559999",
+    email: "wangjing07060510@outlook.com",
+    address: "陕西省",
+    status: NumberInt("1"),
+    createdUser: "wj",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedTime: ISODate("1970-01-01T00:00:00.000Z"),
+    username: "wj"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("66973968a3160000c10046d4"),
+    username: "lisa",
+    password: "lisa080910",
+    sex: NumberInt("2"),
+    age: NumberInt("28"),
+    tel: "14788881111",
+    email: "lisa0312@gmail.com",
+    address: "北京市",
+    status: NumberInt("1"),
+    createdUser: "lisa",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedUser: "admin",
+    modifiedTime: ISODate("2024-07-17T00:00:00.000Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("66975e05a3160000c10046d5"),
+    username: "mike",
+    password: "mike666",
+    sex: 1,
+    age: 30,
+    tel: "11155552222",
+    email: "未设置",
+    address: "未设置",
+    status: 1,
+    salt: "dfhjhfkjlsdfml",
+    createdUser: "admin",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedUser: "admin",
+    modifiedTime: ISODate("2024-07-17T00:00:00.000Z")
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("669762b4564cb950a92d9d23"),
+    username: "alex",
+    password: "3926c314957c282dc037d40e4ef1b113",
+    tel: "",
+    status: NumberInt("0"),
+    salt: "f8138168e8ea44afa1f312917f9fc77a",
+    createdUser: "alex",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedUser: "alex",
+    modifiedTime: ISODate("2024-07-18T02:05:36.28Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("66976946e51f01535e81e8e0"),
+    username: "smith",
+    password: "f81c839bd87f199f55b8b54e5129ed3f",
+    status: NumberInt("0"),
+    salt: "50fc95e634a44627a17f519d68447cf7",
+    createdUser: "smith",
+    _class: "com.mall.classes.user.pojo.entity.User",
+    tel: "",
+    createdTime: ISODate("2024-07-17T00:00:00.000Z"),
+    modifiedTime: ISODate("1970-01-01T00:00:00.000Z")
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("669769fa526a926bd77fc43e"),
+    username: "rose",
+    password: "80be2662771436da6e3a614bf76c3f85",
+    status: NumberInt("0"),
+    salt: "96213dec0ecb4fc1bbbedc3bd9565acf",
+    createdUser: "rose",
+    createdTime: ISODate("2024-07-17T06:51:38.818Z"),
+    _class: "com.mall.classes.user.pojo.entity.User",
+    modifiedTime: ISODate("1970-01-01T00:00:00.000Z")
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("669875350bc686782d5eb323"),
+    username: "zoro",
+    password: "3c3801aac5e1942391ad7b6e5ba36c1c",
+    sex: NumberInt("1"),
+    age: NumberInt("16"),
+    tel: "18186206600",
+    email: "y.vcqrqn@qq.com",
+    address: "北京三门峡市其它区",
+    status: NumberInt("0"),
+    picture: "https://cdn.luogu.com.cn/upload/image_hosting/9dp7m6gb.png?x-oss-process=image/resize,m_lfit,h_170,w_225",
+    salt: "eeb2c83d4ce34e798204446894aaab7a",
+    createdUser: "zoro",
+    createdTime: ISODate("2024-07-18T01:51:49.42Z"),
+    modifiedTime: ISODate("1970-01-01T00:00:00.000Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("6698a88e58563f3c3bc0e9f3"),
+    username: "jax",
+    password: "7c457acbe8472dd489df71737c705ef2",
+    status: NumberInt("0"),
+    salt: "901c81cebacf4115ba299d0239c1ef10",
+    createdUser: "jax",
+    createdTime: ISODate("2024-07-18T05:30:54.395Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("6698ba679270ad4f6979133d"),
+    username: "anna",
+    password: "8610a81b4e04318f39cdbe771200115c",
+    status: NumberInt("0"),
+    salt: "54dd528d6bb74c26bda59787406c6a27",
+    createdUser: "anna",
+    createdTime: ISODate("2024-07-18T06:47:03.336Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("6698ba7e9270ad4f6979133e"),
+    username: "kim",
+    password: "2ee56310bc6a4dea9a0927b43c20c5d9",
+    status: NumberInt("0"),
+    salt: "60e7ed9bdfcc4ab486254d104d335362",
+    createdUser: "kim",
+    createdTime: ISODate("2024-07-18T06:47:26.661Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("6698ba879270ad4f6979133f"),
+    username: "jane",
+    password: "1109b8ffb19c9d05ffefaa49e484b9bd",
+    status: NumberInt("0"),
+    salt: "d1afdb9d33c24bc1839a98c2dc22c598",
+    createdUser: "jane",
+    createdTime: ISODate("2024-07-18T06:47:35.18Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);
+db.getCollection("t_user").insert([ {
+    _id: ObjectId("6698ba999270ad4f69791340"),
+    username: "pluto",
+    password: "8d004d880ac4c5add0e2a2c132429c53",
+    status: NumberInt("0"),
+    salt: "9d36bcf76ee945eaa0488e7f5c072710",
+    createdUser: "pluto",
+    createdTime: ISODate("2024-07-18T06:47:53.833Z"),
+    _class: "com.mall.classes.user.pojo.entity.User"
+} ]);

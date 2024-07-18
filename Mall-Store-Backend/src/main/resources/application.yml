@@ -1,0 +1,8 @@
+server:
+  port: 5088 # 设置端口
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mall
