@@ -19,4 +19,11 @@ public interface ProductService {
      * @return List<ProductVO>
      */
     List<ProductVO> getAllProductList();
+
+    /**
+     * 根据商品名称模糊查询
+     * @param str
+     * @return List<ProductVO>
+     */
+    List<ProductVO> getProductListByStr(String str);
 }

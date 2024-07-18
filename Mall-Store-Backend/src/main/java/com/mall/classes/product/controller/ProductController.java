@@ -35,11 +35,30 @@ public class ProductController {
         return Result.ok();
     }
 
+    /**
+     * 获取所有商品列表接口
+     * @param req
+     * @return
+     */
     @GetMapping("/get/all")
     public Result<List<ProductVO>> getAllProduct(HttpServletRequest req) {
         String token = req.getHeader("authorization");
         UserLoginVO curUser = JWTUtils.getUserInfo(token);
         List<ProductVO> productVOList = productService.getAllProductList();
+        return Result.ok(productVOList);
+    }
+
+    /**
+     * 根据商品名模糊查询 商品接口
+     * @param str
+     * @param req
+     * @return Result<List<ProductVO>>
+     */
+    @GetMapping("/finds/{str}")
+    public Result<List<ProductVO>> getProductListByStr(@PathVariable String str, HttpServletRequest req) {
+        String token = req.getHeader("authorization");
+        UserLoginVO curUser = JWTUtils.getUserInfo(token);
+        List<ProductVO> productVOList = productService.getProductListByStr(str);
         return Result.ok(productVOList);
     }
 }

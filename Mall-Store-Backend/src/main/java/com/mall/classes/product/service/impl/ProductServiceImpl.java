@@ -9,6 +9,8 @@ import com.mall.classes.user.pojo.vo.UserLoginVO;
 import com.mall.tools.common.ServiceCode;
 import com.mall.tools.common.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -58,6 +60,32 @@ public class ProductServiceImpl implements ProductService {
         List<ProductVO> productVOList = new ArrayList<>();
         for (Product product : productList) {
             ProductVO productVO = new ProductVO(product);
+            productVOList.add(productVO);
+        }
+        return productVOList;
+    }
+
+    /**
+     * 根据商品名称模糊查询
+     * @param str
+     * @return List<ProductVO>
+     */
+    @Override
+    public List<ProductVO> getProductListByStr(String str) {
+        // 模糊匹配规则
+        ExampleMatcher matcher=ExampleMatcher.matching()
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING)
+                .withIgnoreCase(true);
+        Product product = new Product();
+        product.setName(str);
+        Example<Product> productExample = Example.of(product, matcher);
+        List<Product> productList = productDao.findAll(productExample);
+        if (productList == null || productList.isEmpty()) {
+            throw new ServiceException(ServiceCode.ERROR_NOT_FOUND, "无相关商品！");
+        }
+        List<ProductVO> productVOList = new ArrayList<>();
+        for (Product tproduct : productList) {
+            ProductVO productVO = new ProductVO(tproduct);
             productVOList.add(productVO);
         }
         return productVOList;
